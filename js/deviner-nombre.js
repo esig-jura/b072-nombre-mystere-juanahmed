@@ -1,6 +1,6 @@
 /**
  * Jeu du nombre mystère
- * @author  Steve Fallet
+ * @author  Juan Ahmed
  * @version 2.0
  * @since   2018-09-09 (date de création)
  */
@@ -32,14 +32,14 @@ do {
     reponse = parseInt(prompt(message));
     nbEssais++;
 
-//Mise en place de conditions en fonction de la saisie utilisateur
-//Si la saisie est plus petite que le nombre mystère
+    //Mise en place de conditions en fonction de la saisie utilisateur
+    //Si la saisie est plus petite que le nombre mystère
     if (reponse < nbMystere) {
 
         //change le message du prompt
         message = 'C\'est plus grand !';
     }
-//Si la saisie est plus grande que le nombre mystère
+    //Si la saisie est plus grande que le nombre mystère
     else if (reponse > nbMystere) {
 
         //change le message du prompt
