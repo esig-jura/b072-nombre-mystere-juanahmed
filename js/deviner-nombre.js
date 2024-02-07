@@ -17,4 +17,36 @@ function tireNombre(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-alert(tireNombre(50,150));
+//déclaration de variables
+let nbMystere = 0;
+let nbEssais = 0;
+let reponse = 0;
+let message = 'Entrez un nombre entre 1 et 100';
+
+//attribution d'une fonction tireNombre à la variable nbMystere
+nbMystere = tireNombre(1, 100);
+
+do {
+
+    //attribution de la saisie utilisateur à une variable + mise en place d'un compteur
+    reponse = parseInt(prompt(message));
+    nbEssais++;
+
+//Mise en place de conditions en fonction de la saisie utilisateur
+//Si la saisie est plus petite que le nombre mystère
+    if (reponse < nbMystere) {
+
+        //change le message du prompt
+        message = 'C\'est plus grand !';
+    }
+//Si la saisie est plus grande que le nombre mystère
+    else if (reponse > nbMystere) {
+
+        //change le message du prompt
+        message = 'C\'est plus petit !';
+    }
+} while (reponse !== nbMystere);
+
+alert(`Vous avez trouvé après ${nbEssais} essais.`);
+
+
